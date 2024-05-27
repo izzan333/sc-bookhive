@@ -1,0 +1,398 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.profile {
+  max-width: 48px;
+  max-height: 38px;
+  fill: #012022;
+}
+
+.notification {
+  width: 48px;
+  height: 28px;
+  fill: #012022;
+}
+
+.logo {
+  max-width: 48px;
+  max-height: 38px;
+  color: #012022;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: #00696c;
+  border-radius: 0 0 34px 34px;
+}
+
+.container .top-header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 12px;
+  margin-right: 12px;
+  margin-left: 12px;
+  height: 48px;
+}
+
+.container .top-header .top-right {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  background-color: #55c3c7;
+  border-radius: 24px;
+  justify-content: center;
+  width: 120px;
+}
+
+.container .top-header .top-left {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #55c3c7;
+  border-radius: 24px;
+  width: 160px;
+}
+
+.container .btm-header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffff;
+  text-align: center;
+  margin-top: 48px;
+}
+
+.container .btm-header .judul {
+  font-size: 5em;
+  font-family: "Roboto-bold";
+}
+
+.judul-p {
+  margin-top: 28px;
+  margin-right: 24vw;
+  margin-left: 24vw;
+  font-size: 1.2em;
+  font-family: "Roboto-thin";
+}
+
+.jelajahi-btn {
+  margin-top: 80px;
+  margin-bottom: 60px;
+  width: 180px;
+  height: 60px;
+  border-radius: 28px;
+  border-color: none;
+  border: none;
+  transition-duration: 0.5s;
+  font-family: "Roboto-regular";
+  font-size: 1em;
+  background-color: #fff;
+}
+
+.jelajahi-btn:hover {
+  background-color: #55c3c7;
+  color: #012022;
+}
+
+.brandname {
+  margin: 0;
+  color: #012022;
+}
+.container-body {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 80px;
+  min-width: 100%;
+}
+
+.recomend-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.recomend-tittle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 1.5em;
+  font-family: "Roboto-bold";
+  text-align: center;
+}
+
+.recomend-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  width: 100vw;
+  gap: 48px;
+  padding: 12px 28px 12px 28px;
+}
+
+.recomend-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.recomend-scroll > .recomend-card-container {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  transition: 0.5s ease-in-out;
+  border-radius: 12px;
+  padding: 12px 12px 12px 12px;
+}
+
+.recomend-scroll > .recomend-card-container > .recomend-card-img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.recomend-card-tittle {
+  font-family: "Roboto-bold";
+  text-align: start;
+  margin-top: 6px;
+}
+
+.recomend-card-published {
+  font-family: "Roboto-regular";
+  text-align: start;
+}
+
+.recomend-scroll:hover .recomend-card-container:not(:hover) {
+  opacity: 0.7;
+  filter: blur(1px);
+}
+
+.recomend-card-container:hover {
+  background-color: #55c3c7;
+  border-radius: 18px;
+  color: #012022;
+  transform: translateY(-6px);
+}
+
+.book-card-mini-container {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: start;
+  transition: 0.5s ease-in-out;
+  padding: 12px 12px 12px 12px;
+}
+
+.book-card-mini-tittle {
+  font-family: "Roboto-bold";
+  margin: 8px 0 0 0;
+}
+
+.book-card-mini-img {
+  width: 160px;
+  height: 240px;
+  object-fit: cover;
+  transition: 0.5s ease-in-out;
+}
+
+.news-layout-container .recomend-card-container {
+  gap: 24px;
+  padding: 12px 12px 12px 12px;
+  transition: 0.5s ease-in-out;
+  border-radius: 18px;
+}
+
+.terbaru-scroll:hover .recomend-card-container:not(:hover) {
+  opacity: 0.7;
+}
+
+.book-search:hover .book-card-mini-container:not(:hover) {
+  opacity: 0.7;
+  filter: blur(1px);
+}
+
+.book-card-mini-container:hover {
+  background-color: #55c3c7;
+  border-radius: 18px;
+  color: #012022;
+  transform: translateY(-6px);
+}
+
+.input-search-bar {
+  width: 50%;
+  height: 38px;
+  border-radius: 28px;
+  border: none;
+  padding-left: 8px;
+  box-shadow: 0px 0px 4px 0px;
+}
+
+.lihat-semua-btn {
+  width: 16vw;
+  height: 7vh;
+  border-radius: 28px;
+  border: none;
+  border-color: #6f797a;
+  transition: 0.5s ease-in-out;
+  background-color: #fff;
+  color: #012022;
+  box-shadow: 0px 0px 4px 0px #6f797a;
+  font-family: "Roboto-regular";
+}
+
+.lihat-semua-btn:hover {
+  box-shadow: 0px 0px 4px 0px #00696c;
+  background-color: #00696c;
+  color: #fff;
+}
+
+.tittle-terbaru,
+.tittle-comingsoon {
+  font-family: "Roboto-bold";
+  font-size: 1.2em;
+  justify-content: center;
+  text-align: center;
+}
+
+.recomend-card-container {
+  scroll-snap-align: center;
+}
+
+.comingsoon-card-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  text-align: center;
+  padding: 12px 12px 12px 12px;
+  transition: 0.5s ease-in-out;
+  border-radius: 18px;
+  scroll-snap-align: center;
+}
+
+.img-comingsoon-card {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.tittle-comingsoon-card {
+  font-family: "Roboto-regular";
+  margin: 6px 0 0 0;
+}
+
+.comingsoon-card-container:hover {
+  background-color: #55c3c7;
+  border-radius: 18px;
+  transform: translateY(-6px);
+}
+
+.comingsoon-scroll:hover .comingsoon-card-container:not(:hover) {
+  opacity: 0.7;
+}
+
+.searchlay-n-newslay-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  flex-direction: row;
+  max-width: 100%;
+  padding: 0 32px 0 32px;
+  margin: 68px 0 0 0;
+  align-items: start;
+}
+
+.search-layout-left {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  max-width: 70%;
+}
+
+.book-search {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 28px 0 0 0;
+}
+
+.container-lihat-semua-btn {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  max-width: 100%;
+  padding: 28px 0 28px 0;
+}
+
+.news-layout-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 20%;
+  gap: 28px;
+}
+
+.container-terbaru {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  max-width: 100%;
+}
+
+.container-segera-datang {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  max-width: 100%;
+}
+
+.terbaru-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  overflow-x: auto;
+  max-width: 100%;
+  scroll-snap-type: x mandatory;
+  padding: 12px 0 0 0;
+}
+
+.comingsoon-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  overflow-x: auto;
+  max-width: 100%;
+  scroll-snap-type: x mandatory;
+  padding: 12px 0 0 0;
+}
+
+.terbaru-scroll > .recomend-card-container {
+  scroll-snap-align: center;
+}
+
+.terbaru-scroll > .recomend-card-container > .recomend-card-img{
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+}

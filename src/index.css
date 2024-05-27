@@ -1,0 +1,27 @@
+@font-face {
+  font-family:'Roboto-regular';
+  src: url(./font/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family:'Roboto-thin';
+  src: url(./font/Roboto/Roboto-Thin.ttf);
+}
+
+@font-face {
+  font-family:'Roboto-bold';
+  src: url(./font/Roboto/Roboto-Bold.ttf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family:'Roboto-regular';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
