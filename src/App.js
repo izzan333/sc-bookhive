@@ -1,19 +1,15 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import "./component/footer.css"
-import "./component/BreakPoint.css"
+import "./component/footer.css";
+import "./component/BreakPoint.css";
+import "./component/NavbarStyle.css";
 import profile from "./icon/logo.svg";
 import notificon from "./icon/notifications.svg";
-import menuicon from "./icon/menu.svg";
-import homeicon from "./icon/home.svg";
-import libraryicon from "./icon/library.svg";
-import bookmarkicon from "./icon/bookmark.svg";
-import settingsicon from "./icon/settings.svg";
-import infoicon from "./icon/info.svg";
 import RecomendCard from "./component/RecomendCard";
 import dilanimg from "./img/dilanposter.jpg";
 import BookCardMini from "./component/BookCardMini";
 import ComingSoonCard from "./component/ComingSoonCard";
+import Navbar from "./component/Navbar";
 
 function App() {
   return (
@@ -223,6 +219,7 @@ function App() {
           </div>
         </div>
       </footer>
+      <Navbar/>
     </div>
   );
 }

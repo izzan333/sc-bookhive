@@ -1,0 +1,58 @@
+.Navbar {
+  position: fixed;
+  top: 25%;
+  left: 10px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 48px;
+  max-width: 60px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: 0.3s ease-in-out;
+}
+
+.navbar-wrapper > ul {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 24px;
+  color: #012022;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul > li {
+  font-size: 0.8em;
+  margin: 0 0 18px 0;
+  transition: 0.3s ease-in-out;
+}
+
+.home-img,
+.library-img,
+.favorite-img,
+.settings-img,
+.about-img {
+    filter: brightness(0) saturate(100%) invert(7%) sepia(10%) saturate(793%) hue-rotate(145deg) brightness(89%) contrast(90%);
+}
+
+li:hover {
+    background-color: #55C3C7;
+    border-radius: 28px;
+    padding: 16px 2px 16px 2px;
+}
+
+li:hover .home-img,
+li:hover .library-img,
+li:hover .favorite-img,
+li:hover .settings-img,
+li:hover .about-img {
+    filter: brightness(0) saturate(100%) invert(10%) sepia(11%) saturate(4027%) hue-rotate(138deg) brightness(94%) contrast(99%);
+  }
+
+ul:hover li:not(:hover) {
+    transform: scale(0.9);
+}
