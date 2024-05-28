@@ -1,0 +1,114 @@
+.InfoBook {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 12px 4px 12px 14px;
+  margin: 0;
+  background-color: #00696c;
+  border-radius: 38px 0 0 38px;
+  color: #fff;
+  height: 100%;
+  box-shadow: -3px 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.infobook-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.infobook-close-container {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: start;
+  align-content: flex-start;
+}
+
+.infobook-close-img {
+    width: 28px;
+    height: auto;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(263%) hue-rotate(66deg) brightness(117%) contrast(100%);
+}
+
+.infobook-img {
+  object-fit: cover;
+  width: 148px;
+  height: auto;
+  border-radius: 18px;
+}
+
+.infobook-main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  gap: 18px;
+}
+
+.infobook-tittle-container,
+.infobook-img-container,
+.infobook-pnd-container,
+.infobook-desc-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.infobook-page-container {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.infobook-page-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.infobook-line {
+  height: auto;
+  width: 1px;
+  background-color: #fff;
+  opacity: 0.8;
+  margin: 0 12px 0 12px;
+}
+
+.infobook-seen-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.infobook-desc {
+  text-align: justify;
+  padding: 0 24px 0 24px;
+  font-family: 'Roboto-regular';
+  font-size: 0.8em;
+  -webkit-mask-image: linear-gradient(0deg, transparent 16px, red 66px);
+}
+
+.infobook-btn-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.infobook-btn {
+    width: 48%;
+    height: 38px;
+    border-radius: 28px;
+    border: none;
+
+}
