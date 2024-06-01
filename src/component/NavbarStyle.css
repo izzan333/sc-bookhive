@@ -21,11 +21,11 @@
   color: #012022;
 }
 
-ul {
+.navbar-wrapper > ul {
   list-style-type: none;
 }
 
-ul > li {
+.navbar-wrapper > ul > li {
   font-size: 0.8em;
   margin: 0 0 18px 0;
   transition: 0.3s ease-in-out;
@@ -39,7 +39,7 @@ ul > li {
     filter: brightness(0) saturate(100%) invert(7%) sepia(10%) saturate(793%) hue-rotate(145deg) brightness(89%) contrast(90%);
 }
 
-li:hover {
+.navbar-wrapper > ul > li:hover {
     background-color: #55C3C7;
     border-radius: 28px;
     padding: 16px 2px 16px 2px;
@@ -53,6 +53,11 @@ li:hover .about-img {
     filter: brightness(0) saturate(100%) invert(10%) sepia(11%) saturate(4027%) hue-rotate(138deg) brightness(94%) contrast(99%);
   }
 
-ul:hover li:not(:hover) {
+.navbar-wrapper > ul:hover li:not(:hover) {
     transform: scale(0.9);
+}
+
+.navbar-wrapper > ul li a {
+  color: #000;
+  text-decoration: none;
 }

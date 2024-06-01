@@ -1,8 +1,10 @@
+import { useState } from "react";
 import closeicon from "../icon/close.svg";
 import "./InfoBookStyle.css";
 
-function InfoBook({tittleBook, imgbook, pnd, page, seen, desc, onClick}) {
-  return (
+function InfoBook({tittleBook, imgbook, pnd, page, seen, desc, onClick, onClickLink}) {
+  
+    return (
     <div className="InfoBook">
         <div className="infobook-wrapper">
             <div className="-infobook-close-container">
@@ -33,7 +35,7 @@ function InfoBook({tittleBook, imgbook, pnd, page, seen, desc, onClick}) {
                     <p className="infobook-desc">{desc}</p>
                 </div>
                 <div className="infobook-btn-wrapper">
-                    <button className="infobook-btn">Baca</button>
+                    <button className="infobook-btn" onClick={onClickLink}>Baca</button>
                 </div>
             </div>
         </div>

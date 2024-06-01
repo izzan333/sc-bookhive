@@ -4,6 +4,7 @@ import libraryicon from "../icon/library.svg";
 import bookmarkicon from "../icon/bookmark.svg";
 import settingsicon from "../icon/settings.svg";
 import infoicon from "../icon/info.svg";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -11,24 +12,34 @@ function Navbar() {
       <div className="navbar-wrapper">
         <ul>
           <li>
-            <img className="home-img" src={homeicon}/>
-            <p>Home</p>
+            <Link to={"/"}>
+              <img className="home-img" src={homeicon} />
+              <p>Home</p>
+            </Link>
           </li>
           <li>
-          <img className="library-img" src={libraryicon}/>
-            <p>Library</p>
+            <Link to={"/Library"}>
+              <img className="library-img" src={libraryicon} />
+              <p>Library</p>
+            </Link>
           </li>
           <li>
-          <img className="favorite-img" src={bookmarkicon}/>
-            <p>Favorite</p>
+            <Link to={"/Favorite"}>
+              <img className="favorite-img" src={bookmarkicon} />
+              <p>Favorite</p>
+            </Link>
           </li>
           <li>
-          <img className="settings-img" src={settingsicon}/>
-            <p>Settings</p>
+            <Link to={"/Settings"}>
+              <img className="settings-img" src={settingsicon} />
+              <p>Settings</p>
+            </Link>
           </li>
           <li>
-          <img className="about-img" src={infoicon}/>
-            <p>About</p>
+            <Link to={"/About"}>
+              <img className="about-img" src={infoicon} />
+              <p>About</p>
+            </Link>
           </li>
         </ul>
       </div>
