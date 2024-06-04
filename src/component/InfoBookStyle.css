@@ -6,7 +6,6 @@
   background-color: #00696c;
   border-radius: 38px 0 0 38px;
   color: #fff;
-  height: 100%;
   box-shadow: -3px 0 5px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -15,7 +14,8 @@
   flex-wrap: nowrap;
   flex-direction: column;
   justify-content: flex-start;
-  width: 100%;
+  width: 380px;
+  height: 100vh;
 }
 
 .infobook-close-container {
@@ -56,6 +56,10 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
+}
+
+.infobook-pnd-container {
+  text-align: center;
 }
 
 .infobook-page-container {

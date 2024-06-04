@@ -26,6 +26,8 @@ function Home() {
   const [searchData, setSearchData] = useState([]);
   const [istogglenotif, settogglenotif] = useState(false);
   const [isclick, setclick] = useState(false);
+  const [newData, setnewData] = useState([]);
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -33,7 +35,7 @@ function Home() {
         let allBooks = [];
 
         // Generate random page number
-        const getRandomPage = () => Math.floor(Math.random() * 10000) + 1;
+        const getRandomPage = () => Math.floor(Math.random() * 6846) + 1;
         const randomPage = getRandomPage();
 
         // Fetch data from the random page
@@ -49,8 +51,8 @@ function Home() {
             (resource) => resource.type === "image/jpeg"
           );
           const src = imgResource ? imgResource.uri : "";
-          const htmlResource = resources.find(
-            (resource) => resource.type.includes("text/html")
+          const htmlResource = resources.find((resource) =>
+            resource.type.includes("text/html")
           );
           const htmlLink = htmlResource ? htmlResource.uri : "#";
 
@@ -85,12 +87,6 @@ function Home() {
     const fetchData = async () => {
       try {
         let allBooks = [];
-
-        // Generate random page number
-        const getRandomPage = () => Math.floor(Math.random() * 10000) + 1;
-        const randomPage = getRandomPage();
-
-        // Fetch data from the random page
         const response = await axios.get(
           `https://gnikdroy.pythonanywhere.com/api/book/?page=1`
         );
@@ -103,8 +99,8 @@ function Home() {
             (resource) => resource.type === "image/jpeg"
           );
           const src = imgResource ? imgResource.uri : "";
-          const htmlResource = resources.find(
-            (resource) => resource.type.includes("text/html")
+          const htmlResource = resources.find((resource) =>
+            resource.type.includes("text/html")
           );
           const htmlLink = htmlResource ? htmlResource.uri : "#";
 
@@ -133,7 +129,7 @@ function Home() {
     settogglenotif(!istogglenotif);
   };
 
-  const recomendCardClick = (book) => {
+  const CardClick = (book) => {
     setclick(!isclick);
     setSelectedBook(book);
   };
@@ -148,7 +144,12 @@ function Home() {
 
   const openLinkRead = () => {
     window.open(selectedBook.htmlLink, "_blank", "noreferrer");
+  };
+
+  const searchHandler = (item) => {
+
   }
+
 
   return (
     <div className="Home">
@@ -256,7 +257,7 @@ function Home() {
                   name={item.name}
                   date={item.date}
                   src={item.src}
-                  onClick={() => recomendCardClick(item)}
+                  onClick={() => CardClick(item)}
                 />
               ))}
             </div>
@@ -268,15 +269,17 @@ function Home() {
                   className="input-search-bar"
                   type="text"
                   placeholder="Cari Buku Kesukaan Mu..."
-                />
+                onInput={searchHandler}/>
               </div>
               <div className="book-search">
                 {searchData.map((item, index) => (
                   <BookCardMini
+                    key={index}
                     tittle={item.title}
                     name={item.name}
                     date={"-"}
                     src={item.src}
+                    onClick={() => CardClick(item)}
                   />
                 ))}
               </div>
@@ -333,7 +336,7 @@ function Home() {
           <div>
             {selectedBook ? (
               <InfoBook
-                onClick={recomendCardClick}
+                onClick={CardClick}
                 tittleBook={selectedBook.title}
                 imgbook={selectedBook.src}
                 pnd={`${selectedBook.name} • ${selectedBook.date}`}
@@ -344,7 +347,7 @@ function Home() {
               />
             ) : (
               <InfoBook
-                onClick={recomendCardClick}
+                onClick={CardClick}
                 titleBook={"notfound"}
                 imgBook={"notfound"}
                 pnd={"notfound"}
