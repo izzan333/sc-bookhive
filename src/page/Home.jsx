@@ -24,9 +24,9 @@ function Home() {
   const [selectedBook, setSelectedBook] = useState(null);
   const [recomendData, setRecomendData] = useState([]);
   const [searchData, setSearchData] = useState([]);
+  const [searchDefData, setSearchDefData] = useState([]);
   const [istogglenotif, settogglenotif] = useState(false);
   const [isclick, setclick] = useState(false);
-  const [newData, setnewData] = useState([]);
 
 
   useEffect(() => {
@@ -73,8 +73,6 @@ function Home() {
           .slice(0, 10);
         setRecomendData(shuffledData);
 
-        const booksl = parsedData.slice(0, 8);
-        setSearchData(booksl);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -117,6 +115,7 @@ function Home() {
 
         const booksl = parsedData.slice(0, 8);
         setSearchData(booksl);
+        setSearchDefData(booksl);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -138,16 +137,28 @@ function Home() {
     navigate("/Login");
   };
 
-  const navigateLibrary = () => {
-    navigate("/Library");
+  const scrolldown = () => {
+    const wh = window.innerHeight * 2;
+    window.scrollBy({
+      top: wh,
+      behavior: "smooth"
+    })
   };
 
   const openLinkRead = () => {
     window.open(selectedBook.htmlLink, "_blank", "noreferrer");
   };
 
-  const searchHandler = (item) => {
-
+  const searchHandler = (e) => {
+    const s = e.target.value
+    if(s) {
+      const filteredData = searchData.filter(item => 
+        item.title.toLowerCase().includes(s) || item.name.includes(s))
+        setSearchData(filteredData);
+    } else {
+      setSearchData(searchDefData);
+    }
+    
   }
 
 
@@ -231,7 +242,7 @@ function Home() {
               Nikmati koleksi buku digital tanpa batas, jelajahi pengetahuan,
               dan temukan karya-karya inspiratif dari berbagai genre.
             </p>
-            <button className="jelajahi-btn" onClick={navigateLibrary}>
+            <button className="jelajahi-btn" onClick={scrolldown}>
               Jelajahi
             </button>
           </div>
@@ -269,7 +280,7 @@ function Home() {
                   className="input-search-bar"
                   type="text"
                   placeholder="Cari Buku Kesukaan Mu..."
-                onInput={searchHandler}/>
+                onChange={searchHandler}/>
               </div>
               <div className="book-search">
                 {searchData.map((item, index) => (

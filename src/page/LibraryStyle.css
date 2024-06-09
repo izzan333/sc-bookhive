@@ -1,0 +1,90 @@
+.Library {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.header-wrapper {
+    width: 100%;
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    border-radius: 32px;
+    padding: 8px 28px 8px 28px;
+    margin: 12px;
+    background-color: #55C3C7;
+}
+
+.header-top-l {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center ;
+    gap: 12px;
+}
+
+.header-top-l > .img-brand {
+    width: 48px;
+    height: auto;
+}
+
+.header-top-r {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    gap: 12px;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.content-container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    height: 100%;
+    padding: 48px;
+}
+
+.searchbar {
+    width: 220px;
+    height: 32px;
+    border-radius: 28px;
+    box-shadow: 0 0 5 0 rgba(0, 0, 0, 0.2);
+}
+
+.search-bar-container {
+    margin: 32px 0 0 0;
+}
+
+.container-book > .library-slider {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 20% 20% 20% 20%;
+    overflow-y: auto;
+}
+
+.library-slider > .book-card-mini-container {
+width: 180px;
+height: auto;
+}
